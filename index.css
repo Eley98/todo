@@ -1,0 +1,66 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-family: 'Kanit';
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.lupa img{
+    position: relative;
+    right: 40px;
+    top: 12px;
+}
+.all select{
+   background-color: rgb(105, 78, 255);
+   color: rgb(255, 255, 255);
+   width: 80px;
+   height: 44px;
+   border-radius: 5px;
+   font-weight: bold;
+   font-size: 19px;
+}
+.lun{
+    background-color:rgb(105, 78, 255) ;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    left: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.note-text{
+    font-weight: bold;
+    font-size: 24px;
+}
+.notes-list{
+    display: flex;
+    justify-content: center;
+    right: 190px;
+    position: relative;
+    top: 30px;
+}
+.note_item input{
+    height: 22px;
+    width: 22px;
+    position: relative;
+    top: 3px;
+    right: 5px;
+}
+.line{
+background-color: rgb(105, 78, 255);
+width: 550px;
+height: 1px;
+position: relative;
+top: 25px;
+left: 500px;
+}
+.allelem{
+    line-height: 70px;
+}
