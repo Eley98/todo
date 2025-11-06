@@ -1,14 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 h1 {
     display: flex;
     justify-content: center;
     font-weight: 400;
     font-family: 'Kanit';
+    position: relative;
+    top: 10px;
 }
 
 .form {
     display: flex;
     justify-content: center;
     position: relative;
+    top: 20px;
 }
 .lupa img{
     position: relative;
@@ -24,12 +31,13 @@ h1 {
    font-weight: bold;
    font-size: 19px;
 }
-.lun{
+.lun button{
     background-color:rgb(105, 78, 255) ;
+    border: none;
     width: 44px;
     height: 44px;
     position: relative;
-    left: 20px;
+    left: 1050px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -62,5 +70,51 @@ top: 25px;
 left: 500px;
 }
 .allelem{
+    position: relative;
+    top: -80px;
     line-height: 70px;
+}
+.plus{
+    background-color:  rgb(105, 78, 255);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 1110px;
+    top: 240px;
+}
+.al2{
+    transition: background-color 0.3s ease;
+}
+.al2 :hover{
+   background-color:  rgb(57, 40, 151);
+   transform: scale(1.1);
+}
+.all3{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 1007px;
+    top: 45px;
+}
+.oo{
+    position: relative;
+    top: -1px;
+}
+.all4{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 1007px;
+    top: 95px;
+}
+.all5{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 1007px;
+    top: 150px;
 }
