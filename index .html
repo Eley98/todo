@@ -18,14 +18,21 @@
     <h1>TODO LIST</h1>
     <div class="form">
         <input type="text" id="fname" name="firstname" placeholder=" Search note..." style="width: 630px; height: 40px;
-    border:  1px solid rgb(105, 78, 255); border-radius: 5px; font-size: 19px;color: rgb(218, 218, 218);">
+    border:  1px solid rgb(105, 78, 255); border-radius: 5px; font-size: 19px;color: rgb(156, 156, 156);">
         <div class="lupa"><img src="Vector.png" alt="картинка"></div>
         <div class="all"><select name="Category">
                 <option value="1">ALL</option>
                 <option value="2">Not All</option>
             </select></div>
     </div>
-     <div class="lun"> <button><img src="Vector (1).png" alt="картинка"></div></button></div>
+   <div class="lun">
+  <button id="Btn">
+    <img id="img1" src="Vector (1).png" alt="картинка1" style="display: block;">
+    <img id="img2" src="Vector (3).png" alt="картинка2" style="display: none;">
+  </button>
+</div>
+</div>
+</div>
     </div>
       <div class="all3">
                 <div class="o"><img src="Vector (1).svg" alt="картинка"></div>
@@ -64,9 +71,15 @@
             </label>
         </div>
     </div>
-    <div class="al2">
-    <div class="plus"><img src="Vector (2).png" alt="картинка"></div>
-    </div>
+    <!-- Ваша кнопка или элемент, по которому кликать -->
+<div class="al2">
+  <div class="plus" id="openModalBtn" style="cursor:pointer;"><img src="Vector (2).png" alt="картинка"></div>
+</div>
+
+<!-- Модальное окно (сначала скрыто) -->
+<div class="white">
+    <div class="hh2">NEW NOTE</div>
+</div>
 </body>
 
 </html>

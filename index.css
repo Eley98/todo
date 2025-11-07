@@ -1,7 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -17,65 +23,75 @@ h1 {
     position: relative;
     top: 20px;
 }
-.lupa img{
+
+.lupa img {
     position: relative;
     right: 40px;
     top: 12px;
 }
-.all select{
-   background-color: rgb(105, 78, 255);
-   color: rgb(255, 255, 255);
-   width: 80px;
-   height: 44px;
-   border-radius: 5px;
-   font-weight: bold;
-   font-size: 19px;
+
+.all select {
+    background-color: rgb(105, 78, 255);
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 44px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 19px;
 }
-.lun button{
-    background-color:rgb(105, 78, 255) ;
+
+.lun button {
+    background-color: rgb(105, 78, 255);
     border: none;
     width: 44px;
     height: 44px;
     position: relative;
-    left: 1050px;
-    border-radius: 5px;
+    left: 1150px;
+    border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: -24px;
 }
-.note-text{
+
+.note-text {
     font-weight: bold;
     font-size: 24px;
 }
-.notes-list{
+
+.notes-list {
     display: flex;
     justify-content: center;
     right: 190px;
     position: relative;
     top: 30px;
 }
-.note_item input{
+
+.note_item input {
     height: 22px;
     width: 22px;
     position: relative;
     top: 3px;
     right: 5px;
 }
-.line{
-background-color: rgb(105, 78, 255);
-width: 550px;
-height: 1px;
-position: relative;
-top: 25px;
-left: 500px;
+
+.line {
+    background-color: rgb(105, 78, 255);
+    width: 550px;
+    height: 1px;
+    position: relative;
+    top: 25px;
+    left: 500px;
 }
-.allelem{
+
+.allelem {
     position: relative;
     top: -80px;
     line-height: 70px;
 }
-.plus{
-    background-color:  rgb(105, 78, 255);
+
+.plus {
+    background-color: rgb(105, 78, 255);
     border-radius: 50px;
     width: 50px;
     height: 50px;
@@ -86,35 +102,71 @@ left: 500px;
     left: 1110px;
     top: 240px;
 }
-.al2{
+
+.al2 {
     transition: background-color 0.3s ease;
 }
-.al2 :hover{
-   background-color:  rgb(57, 40, 151);
-   transform: scale(1.1);
+
+.al2 :hover {
+    background-color: rgb(57, 40, 151);
+    transform: scale(1.1);
 }
-.all3{
+
+.all3 {
     display: flex;
     gap: 10px;
     position: relative;
     left: 1007px;
     top: 45px;
 }
-.oo{
+
+.oo {
     position: relative;
     top: -1px;
 }
-.all4{
+
+.all4 {
     display: flex;
     gap: 10px;
     position: relative;
     left: 1007px;
     top: 95px;
 }
-.all5{
+
+.all5 {
     display: flex;
     gap: 10px;
     position: relative;
     left: 1007px;
     top: 150px;
+}
+
+body {
+    transition: background-color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #fff;
+}
+
+#img1 {
+    display: block;
+}
+
+#img2 {
+    display: none;
+}
+
+.white{
+    background-color: aliceblue;
+    height: 500px;
+    width: 550px;
+    border-radius: 15px;
+
+}
+.hh2{
+  color: black;
+  font-size: 27px;
+  font-weight: bold;
 }
