@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newText = prompt('Edit note:', noteText);
                 if (newText && newText.trim()) {
                     noteElement.querySelector('p').innerHTML = `
-                        <input type="checkbox" name="note${Date.now()}" class="click">${newText.trim()}
+                        <input type="checkbox" onchange="this.nextSibling.style.textDecaration = this.checked ? 'line-through' : 'none' "<span>${newText.trim()}</span> name="note${Date.now()}" class="click">${newText.trim()}
                     `;
                 }
             });
@@ -218,3 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// Выпадающий список ALL
