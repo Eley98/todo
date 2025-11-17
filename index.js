@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkboxContainer.appendChild(lineBefore);
         checkboxContainer.appendChild(newNote);
 
-        // Добавляем обработчики для новых иконок
+        // Добавляем обработчики для новых иконок и чекбокса
         addIconEventListeners(newNote);
     }
 
@@ -115,24 +115,36 @@ document.addEventListener('DOMContentLoaded', () => {
         addIconEventListeners(note);
     });
 
-    // Назначение обработчиков для кнопок редактирования и удаления
+    // Функция для обработки иконок и чекбокса
     function addIconEventListeners(noteElement) {
+        const checkbox = noteElement.querySelector('input[type="checkbox"]');
         const penIcon = noteElement.querySelector('.pen');
         const basketIcon = noteElement.querySelector('.basket');
+        const noteTextEl = noteElement.querySelector('p');
 
-        if (penIcon) {
-            // Редактировать заметку
-            penIcon.addEventListener('click', () => {
-                const noteText = noteElement.querySelector('p').textContent;
-                const newText = prompt('Edit note:', noteText);
-                if (newText && newText.trim()) {
-                    noteElement.querySelector('p').innerHTML = `
-                        <input type="checkbox" onchange="this.nextSibling.style.textDecaration = this.checked ? 'line-through' : 'none' "<span>${newText.trim()}</span> name="note${Date.now()}" class="click">${newText.trim()}
-                    `;
+        // Обработка чекбокса
+        if (checkbox) {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    noteTextEl.style.textDecoration = 'line-through';
+                } else {
+                    noteTextEl.style.textDecoration = 'none';
                 }
             });
         }
 
+       if (penIcon) {
+    penIcon.addEventListener('click', () => {
+        const currentText = noteTextEl.innerHTML.replace(/<[^>]*>/g, '').trim();
+        const newText = prompt('Edit note:', currentText);
+        if (newText && newText.trim()) {
+            noteTextEl.innerHTML = `
+    <input type="checkbox" ${checkbox.checked ? 'checked' : ''}>
+    <span>${newText.trim()}</span>
+`;
+        }
+    });
+}
         if (basketIcon) {
             // Удалить заметку + линии
             basketIcon.addEventListener('click', () => {
@@ -218,6 +230,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+const selectFilter = document.querySelector('.all');
+selectFilter.addEventListener('change', () => {
+    const value = selectFilter.value;
+    const notes = document.querySelectorAll('.note');
+
+    notes.forEach(note => {
+        const checkbox = note.querySelector('input[type="checkbox"]');
+
+        if (value === 'all') {
+            // показываем все заметки
+            note.style.display = '';
+        } else if (value === '1') {
+            // Показываем только выполненные
+            if (checkbox.checked) {
+                note.style.display = '';
+            } else {
+                note.style.display = 'none';
+            }
+        } else if (value === '2') {
+            // Показываем только невыполненные
+            if (!checkbox.checked) {
+                note.style.display = '';
+            } else {
+                note.style.display = 'none';
+            }
+        }
+        
+    });
+    
+});
 
 
-// Выпадающий список ALL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

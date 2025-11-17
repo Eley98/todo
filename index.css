@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -35,18 +34,15 @@ form {
 }
 
 .form {
+    padding: 12px;
     width: 530px;
-    height: 35px;
+    height: 12px;
     border-radius: 7px;
     border: 1px solid rgb(105, 78, 255);
     position: relative;
     left: 35px;
+}
 
-}
-.form text{
-    position: relative;
-    left: 30px;
-}
 body.dark-mode .form-container input {
     background: #555;
     color: white;
@@ -56,6 +52,7 @@ body.dark-mode .form-container input {
 body.dark-mode .form-container ::placeholder {
     color: white;
 }
+
 form ::placeholder {
     position: relative;
     left: 20px;
