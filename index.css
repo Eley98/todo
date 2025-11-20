@@ -305,11 +305,13 @@ body.dark-mode .cancel-btn {
     align-items: center;
     justify-content: center;
     border: none;
+    transition: background-color 0.3s ease;
+
 
 }
 
 .add-btn:hover {
-    background: rgb(105, 78, 255);
+    background-color: rgb(57, 40, 151);
 }
 
 .light-mode {
@@ -355,4 +357,8 @@ body {
     justify-content: center;
     text-align: center;
     gap: 20px;
+}
+input[type="checkbox"]{
+    width: 30px !important;
+    height: 30px !important;
 }

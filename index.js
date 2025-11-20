@@ -133,18 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-       if (penIcon) {
-    penIcon.addEventListener('click', () => {
-        const currentText = noteTextEl.innerHTML.replace(/<[^>]*>/g, '').trim();
-        const newText = prompt('Edit note:', currentText);
-        if (newText && newText.trim()) {
-            noteTextEl.innerHTML = `
+        if (penIcon) {
+            penIcon.addEventListener('click', () => {
+                const currentText = noteTextEl.innerHTML.replace(/<[^>]*>/g, '').trim();
+                const newText = prompt('Edit note:', currentText);
+                if (newText && newText.trim()) {
+                    noteTextEl.innerHTML = `
     <input type="checkbox" ${checkbox.checked ? 'checked' : ''}>
     <span>${newText.trim()}</span>
 `;
+                }
+            });
         }
-    });
-}
         if (basketIcon) {
             // Удалить заметку + линии
             basketIcon.addEventListener('click', () => {
@@ -256,9 +256,9 @@ selectFilter.addEventListener('change', () => {
                 note.style.display = 'none';
             }
         }
-        
+
     });
-    
+
 });
 
 
